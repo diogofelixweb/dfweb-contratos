@@ -1,8 +1,8 @@
 [build]
   base = "dfweb-contratos-v2"
   command = "npm run build"
-  publish = "dfweb-contratos-v2/dist"
-  functions = "dfweb-contratos-v2/netlify/functions"
+  publish = "dist"
+  functions = "netlify/functions"
 
 [functions]
   node_bundler = "esbuild"
