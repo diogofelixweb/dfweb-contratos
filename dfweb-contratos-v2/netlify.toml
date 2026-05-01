@@ -1,10 +1,16 @@
 [build]
+  base = "dfweb-contratos-v2"
   command = "npm run build"
-  publish = "dist"
-  functions = "netlify/functions"
+  publish = "dfweb-contratos-v2/dist"
+  functions = "dfweb-contratos-v2/netlify/functions"
 
 [functions]
   node_bundler = "esbuild"
+
+[[redirects]]
+  from = "/.netlify/functions/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
 
 [[redirects]]
   from = "/*"
